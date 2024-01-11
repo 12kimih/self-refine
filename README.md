@@ -29,6 +29,10 @@ conda install pip
 ```
 
 ```bash
+pip install -U pip setuptools wheel
+```
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -43,6 +47,10 @@ python3 -m venv venv
 
 ```bash
 source venv/bin/activate
+```
+
+```bash
+pip install -U pip setuptools wheel
 ```
 
 ```bash
