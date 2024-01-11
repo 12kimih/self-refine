@@ -1,0 +1,190 @@
+{"title":"Markov Decision Process","acronym":"MDP"}
+{"title":"Mean Absolute Error","acronym":"MAE"}
+{"title":"Pre-training with Extracted Gap-sentences for Abstractive Summarization","acronym":"PEGASUS"}
+{"title":"Robustly Optimized BERT Pretraining Approach","acronym":"RoBERTa"}
+{"title":"Variational Autoencoder","acronym":"VAE"}
+{"title":"Music Language Model","acronym":"MLM"}
+{"title":"False Positive Rate","acronym":"FPR"}
+{"title":"Deep Learning Important Features","acronym":"DeepLIFT"}
+{"title":"Gradient Descent","acronym":"GD"}
+{"title":"Fast Fourier transform","acronym":"FFT"}
+{"title":"Enhanced Representation through Knowledge Integration","acronym":"ERNIE"}
+{"title":"Convolutional Deep Belief Network","acronym":"CDBN"}
+{"title":"Learning Vector Quantization","acronym":"LVQ"}
+{"title":"Virtual Reality","acronym":"VR"}
+{"title":"Self-Organizing Map","acronym":"SOM"}
+{"title":"Area under the ROC Curve","acronym":"AUC"}
+{"title":"Visual Geometry Group","acronym":"VGG"}
+{"title":"Decision Tree","acronym":"DT"}
+{"title":"Sequence to Sequence Learning with Neural Networks","acronym":"Seq2Seq"}
+{"title":"True Negative Rate","acronym":"TNR"}
+{"title":"Embeddings from Language Models","acronym":"ELMo"}
+{"title":"Deep Learning","acronym":"DL"}
+{"title":"Feedforward Neural Network","acronym":"FNN"}
+{"title":"Deep Q-Network","acronym":"DQN"}
+{"title":"Sign Language Translation Transformer","acronym":"SLTT"}
+{"title":"Support Vector Machine","acronym":"SVM"}
+{"title":"Reduced Error Pruning","acronym":"REP"}
+{"title":"Hierarchical Latent Dirichlet Allocation","acronym":"HLDA"}
+{"title":"Named Entity Recognition in Query","acronym":"NERQ"}
+{"title":"Onset Detection Function","acronym":"ODF"}
+{"title":"Voice Activity Detection","acronym":"VAD"}
+{"title":"Bayesian Ridge Regression","acronym":"BRR"}
+{"title":"Latent Dirichlet Allocation","acronym":"LDA"}
+{"title":"Music Recommender System","acronym":"MRS"}
+{"title":"Neural Style Transfer","acronym":"NST"}
+{"title":"Non-Maximum Suppression","acronym":"NMS"}
+{"title":"Concept Activation Vector","acronym":"CAV"}
+{"title":"Probabilistic Neural Network","acronym":"PNN"}
+{"title":"Hopfield Neural Network","acronym":"HNN"}
+{"title":"Automatic Music Transcription","acronym":"AMT"}
+{"title":"Explanation Infidelity","acronym":"INFD"}
+{"title":"Deep Convolutional Mixture Density Network","acronym":"DCMDN"}
+{"title":"Counterfactual Bias Insertion","acronym":"CBI"}
+{"title":"Expectation Maximization","acronym":"EM"}
+{"title":"Rectified Linear Unit","acronym":"ReLU"}
+{"title":"Extreme Learning Machine","acronym":"ELM"}
+{"title":"Principal Component Analysis","acronym":"PCA"}
+{"title":"Positive Pointwise Mutual Information","acronym":"PPMI"}
+{"title":"Part of Speech","acronym":"POS"}
+{"title":"Global Vectors for Word Representation","acronym":"GloVE"}
+{"title":"Finite State Transducer","acronym":"FST"}
+{"title":"Trust Region Policy Optimization","acronym":"TRPO"}
+{"title":"Artificial Intelligence","acronym":"AI"}
+{"title":"True Positive Rate","acronym":"TPR"}
+{"title":"False Negative Rate","acronym":"FNR"}
+{"title":"Stochastic Block Model","acronym":"SBM"}
+{"title":"No Free Lunch","acronym":"NFL"}
+{"title":"Classification and Regression Tree","acronym":"CART"}
+{"title":"A task of full translation from the sign language into the spoken one","acronym":"Sign2Text"}
+{"title":"Latent Dirichlet Allocation Differential Evolution","acronym":"LDADE"}
+{"title":"Cerebellar Model Articulation Controller","acronym":"CMAC"}
+{"title":"Fully Connected","acronym":"FC"}
+{"title":"Bayesian Neural Network","acronym":"BNN"}
+{"title":"Differential Evolution","acronym":"DE"}
+{"title":"Ordinary Least Squares","acronym":"OLS"}
+{"title":"Multi-Layer Perceptron","acronym":"MLP"}
+{"title":"Named Entity Recognition","acronym":"NER"}
+{"title":"Parametric Rectified Linear Unit","acronym":"PReLU"}
+{"title":"Music Emotion Recognition","acronym":"MER"}
+{"title":"Layer-wise Relevance Propagation","acronym":"LRP"}
+{"title":"Floating Point Operations Per Second","acronym":"FLOPS"}
+{"title":"Efficiently Learning an Encoder that Classifies Token Replacements Accurately","acronym":"ELECTRA"}
+{"title":"Conditional Random Field","acronym":"CRF"}
+{"title":"Generalized Additive Model","acronym":"GAM"}
+{"title":"Continuous Action-set Learning Automata","acronym":"CALA"}
+{"title":"Generative Pre-trained Transformer","acronym":"GPT"}
+{"title":"Conditional Markov Model","acronym":"CMM"}
+{"title":"Naive Bayes with Kernel Estimation","acronym":"NBKE"}
+{"title":"Discrete Wavelet Transform","acronym":"DWT"}
+{"title":"Essential Regression","acronym":"ER"}
+{"title":"Gray Level Co-occurrence Matrix","acronym":"GLCM"}
+{"title":"Independent and Identically Distributed","acronym":"IID"}
+{"title":"Bilingual Evaluation Understudy","acronym":"BLEU"}
+{"title":"Poisson Additive Co-Clustering","acronym":"PACO"}
+{"title":"Extreme Gradient Boosting","acronym":"XGBoost"}
+{"title":"Convolutional Recurrent Neural Network","acronym":"CRNN"}
+{"title":"Weighted Finite-State Transducer","acronym":"WFST"}
+{"title":"Fully Convolutional Convolutional Neural Network","acronym":"FC-CNN"}
+{"title":"Deep Convolutional Generative Adversarial Network","acronym":"DCGAN"}
+{"title":"Hierarchical Dirichlet Process","acronym":"HDP"}
+{"title":"Activation Maximization","acronym":"AM"}
+{"title":"Volumetric Convolutional Neural Network","acronym":"V-Net"}
+{"title":"Learning to Rank","acronym":"LTR"}
+{"title":"Hierarchical Attention Network","acronym":"HAN"}
+{"title":"Data Augmentation and Auxiliary Feature","acronym":"DAAF"}
+{"title":"Bidirectional Long Short-Term Memory","acronym":"BiLSTM"}
+{"title":"Global Average Pooling","acronym":"GAP"}
+{"title":"Constant Error Carousel","acronym":"CEC"}
+{"title":"Minimum Description Length","acronym":"MDL"}
+{"title":"Stochastic Convex Hull","acronym":"SCH"}
+{"title":"Long Short-Term Memory","acronym":"LSTM"}
+{"title":"Probabilistic Matrix Factorization","acronym":"PMF"}
+{"title":"Multi-Dimensional Recurrent Neural Network","acronym":"MDRNN"}
+{"title":"Random Neural Network","acronym":"RandNN"}
+{"title":"Big Query Machine Learning","acronym":"BQML"}
+{"title":"Mean Intersection over Union","acronym":"MIoU"}
+{"title":"Selt-Taught Learning","acronym":"STL"}
+{"title":"Pixel Accuracy","acronym":"PA"}
+{"title":"Regression-based Latent Factor Model","acronym":"RLFM"}
+{"title":"Gaussian Process Regression","acronym":"GPR"}
+{"title":"Maximum Entropy","acronym":"MaxEnt"}
+{"title":"Deep Taylor Decomposition","acronym":"DTD"}
+{"title":"Extremely Randomized Trees","acronym":"EXT"}
+{"title":"Exponential Linear Unit","acronym":"ELU"}
+{"title":"Input Independence Rate","acronym":"IIR"}
+{"title":"Bayesian Network","acronym":"BN"}
+{"title":"Naive Bayes","acronym":"NB"}
+{"title":"Factor Augmented Sparse Linear Regression Model","acronym":"FARM"}
+{"title":"Global Attribution Mapping","acronym":"GAM"}
+{"title":"Fully Connected Long Short-Term Memory","acronym":"FC-LSTM"}
+{"title":"Backpropagation Through Time","acronym":"BPTT"}
+{"title":"Project Manager","acronym":"PM"}
+{"title":"A one to one translation from the single sign to the single gloss","acronym":"Sign2Gloss"}
+{"title":"Radial Basis Function Neural Network","acronym":"RBFNN"}
+{"title":"Stacked Autoencoder","acronym":"SAE"}
+{"title":"A task of transforming raw glosses into meaningful sentences","acronym":"Gloss2Text"}
+{"title":"Real-Time Recurrent Learning","acronym":"RTRL"}
+{"title":"Mean Squared Error","acronym":"MSE"}
+{"title":"Latent Semantic Analysis","acronym":"LSA"}
+{"title":"Explainable Artificial Intelligence","acronym":"XAI"}
+{"title":"Probabilistic Latent Semantic Indexing","acronym":"PLSI"}
+{"title":"Bayesian Probabilistic Matrix Factorization","acronym":"BPMF"}
+{"title":"Continuous Bag of Words","acronym":"CBOW"}
+{"title":"Word Error Rate","acronym":"WER"}
+{"title":"Region of Interest","acronym":"ROI"}
+{"title":"Linear Discriminant Analysis","acronym":"LDA"}
+{"title":"Computer Vision","acronym":"CV"}
+{"title":"Search-Based Software Engineering","acronym":"SBSE"}
+{"title":"Hamburg Sign Language Notation System","acronym":"HamNoSys"}
+{"title":"k-Nearest Neighbors","acronym":"k-NN"}
+{"title":"Neural Network","acronym":"NN"}
+{"title":"Kullback-Leibler","acronym":"KL"}
+{"title":"t-distributed Stochastic Neighbor Embedding","acronym":"t-SNE"}
+{"title":"Universal Language Model Fine-Tuning","acronym":"ULMFiT"}
+{"title":"Neural Machine Translation","acronym":"NLT"}
+{"title":"Shapley Additive Explanation","acronym":"SHAP"}
+{"title":"Time-Lagged Feedforward Neural Network","acronym":"TLFN"}
+{"title":"Reinforcement Learning","acronym":"RL"}
+{"title":"State-Action-Reward-State-Action","acronym":"SARSA"}
+{"title":"Conditional Restricted Boltzmann Machine","acronym":"CRBM"}
+{"title":"Input Dependence Rate","acronym":"IDR"}
+{"title":"Self-Supervised Learning","acronym":"SSL"}
+{"title":"Gaussian Mixture Model","acronym":"GMM"}
+{"title":"Smooth Support Vector Machine","acronym":"SSVM"}
+{"title":"Random Sample Consensus","acronym":"RANSAC"}
+{"title":"Vector Product Neural Network","acronym":"VPNN"}
+{"title":"Sequential Model-Based Optimization","acronym":"SMBO"}
+{"title":"Intersection over Union","acronym":"IoU"}
+{"title":"Adaptive Inertia Weight Particle Swarm Optimization","acronym":"AIWPSO"}
+{"title":"Partially Observable Markov Decision Process","acronym":"POMDP"}
+{"title":"Text-to-Text Transfer Transformer","acronym":"T5"}
+{"title":"Recurrent Neural Network Language Model","acronym":"RNNLM"}
+{"title":"Mixture Density Network","acronym":"MDN"}
+{"title":"Tree-Interpreter","acronym":"TINT"}
+{"title":"Singing Voice Detection","acronym":"SVD"}
+{"title":"Detection Rate","acronym":"DR"}
+{"title":"Stacked Denoising Autoencoder","acronym":"SDAE"}
+{"title":"Stochastic Gradient Descent","acronym":"SGD"}
+{"title":"Pointwise Mutual Information","acronym":"PMI"}
+{"title":"Gradient-Boosting Random Convolutional Network","acronym":"GBRCN"}
+{"title":"Hidden Markov Model","acronym":"HMM"}
+{"title":"Bidirectional Recurrent Neural Network","acronym":"BRNN"}
+{"title":"Neural Architecture Search","acronym":"NAS"}
+{"title":"Ordinary Linear Regression","acronym":"OLR"}
+{"title":"Targeted Data Augmentation","acronym":"TDA"}
+{"title":"Spectral Relevance Analysis","acronym":"SpRAy"}
+{"title":"Support Vector Regression","acronym":"SVR"}
+{"title":"Temporal Difference","acronym":"TD"}
+{"title":"Neural Turing Machine","acronym":"NTM"}
+{"title":"Deep Stacking Network","acronym":"DSN"}
+{"title":"Random Forest","acronym":"RF"}
+{"title":"Rotation Invariant Convolutional Neural Network","acronym":"RICNN"}
+{"title":"Markov Chain Monte Carlo","acronym":"MCMC"}
+{"title":"Repeated Incremental Pruning to Produce Error Reduction","acronym":"RIPPER"}
+{"title":"Model Contrast Score","acronym":"MCS"}
+{"title":"Bidirectional Feature Pyramid Network","acronym":"BiFPN"}
+{"title":"Theta Automatic Interaction Detection","acronym":"THAID"}
+{"title":"Single-Layer Perceptron","acronym":"SLP"}
+{"title":"Style Transfer","acronym":"ST"}
+{"title":"Modified Sparse Denoising Autoencoder","acronym":"MSDAE"}
