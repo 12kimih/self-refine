@@ -64,25 +64,25 @@ cp dotenv .env
 ```
 
 > [!IMPORTANT]
-> Replace `YOUR_KEY` inside `.env` file with your own key.
+> Fill in the blanks in the `.env` file according to your personal environment.
 
 ### Run program
 
 > [!NOTE]
-> If `model` argument is not specified, the default model is `gpt-3.5-turbo-1106`.
+> If `model` argument is not specified, the default model is `gpt-3.5-turbo-0125`.
 >
 > You can also use [Hugging Face](https://huggingface.co/) models. Run `python3 main.py -h` to find further details.
 
 #### To take input from the command line
 
 ```bash
-python3 main.py --task {acronym,dialog,sentence,sentiment} --generate [--model {gpt-3.5-turbo,gpt-3.5-turbo-16k,gpt-3.5-turbo-instruct,gpt-3.5-turbo-1106,gpt-4,gpt-4-32k,gpt-4-0613,gpt-4-32k-0613,gpt-4-1106-preview}]
+python3 main.py --task {acronym,dialog,sentence,sentiment} --generate [--model {gpt-3.5-turbo,gpt-3.5-turbo-instruct,gpt-3.5-turbo-0125,gpt-4,gpt-4-32k,gpt-4-turbo-preview,gpt-4-vision-preview,gpt-4-0125-preview}]
 ```
 
 #### To take input from a dataset file
 
 ```bash
-python3 main.py --task {acronym,dialog,sentence,sentiment} --generate --file [--model {gpt-3.5-turbo,gpt-3.5-turbo-16k,gpt-3.5-turbo-instruct,gpt-3.5-turbo-1106,gpt-4,gpt-4-32k,gpt-4-0613,gpt-4-32k-0613,gpt-4-1106-preview}]
+python3 main.py --task {acronym,dialog,sentence,sentiment} --generate --file [--model {gpt-3.5-turbo,gpt-3.5-turbo-instruct,gpt-3.5-turbo-0125,gpt-4,gpt-4-32k,gpt-4-turbo-preview,gpt-4-vision-preview,gpt-4-0125-preview}]
 ```
 
 > [!NOTE]
@@ -90,28 +90,28 @@ python3 main.py --task {acronym,dialog,sentence,sentiment} --generate --file [--
 
 ### Examples
 
-1. Acronym generation with `gpt-3.5-turbo-1106`, taking input from the command line
+1. Acronym generation with `gpt-3.5-turbo-0125`, taking input from the command line
 
     ```bash
     python3 main.py --task acronym --generate
     ```
 
-1. Acronym generation with `gpt-3.5-turbo-1106`, printing prompts
+1. Acronym generation with `gpt-3.5-turbo-0125`, printing prompts
 
     ```bash
     python3 main.py --task acronym --generate --prompt
     ```
 
-1. Acronym generation with `gpt-3.5-turbo-1106`, taking input from `data/acronym/ml-acronyms-test.jsonl`
+1. Acronym generation with `gpt-3.5-turbo-0125`, taking input from `data/acronym/ml-acronyms-test.jsonl`
 
     ```bash
     python3 main.py --task acronym --generate --file
     ```
 
-1. Acronym generation with `gpt-4-1106-preview`
+1. Acronym generation with `gpt-4-0125-preview`
 
     ```bash
-    python3 main.py --task acronym --generate --model gpt-4-1106-preview
+    python3 main.py --task acronym --generate --model gpt-4-0125-preview
     ```
 
 1. Acronym generation with `mistralai/Mistral-7B-v0.1`, using `float16` data type
