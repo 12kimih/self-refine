@@ -9,20 +9,18 @@ from pydantic import Field, BaseModel
 
 MODEL = {
     "gpt-3.5-turbo": "gpt-3.5",
-    "gpt-3.5-turbo-16k": "gpt-3.5",
     "gpt-3.5-turbo-instruct": "gpt-3.5-instruct",
-    "gpt-3.5-turbo-1106": "gpt-3.5",
+    "gpt-3.5-turbo-0125": "gpt-3.5",
     "gpt-4": "gpt-4",
     "gpt-4-32k": "gpt-4",
-    "gpt-4-0613": "gpt-4",
-    "gpt-4-32k-0613": "gpt-4",
-    "gpt-4-1106-preview": "gpt-4",
+    "gpt-4-turbo-preview": "gpt-4",
     "gpt-4-vision-preview": "gpt-4-vision",
+    "gpt-4-0125-preview": "gpt-4",
 }
 
 
 class APIConfig(BaseModel):
-    model: str = Field(default="gpt-3.5-turbo-1106", description="[api] text generation model code", json_schema_extra={"choices": list(MODEL)})
+    model: str = Field(default="gpt-3.5-turbo-0125", description="[api] text generation model code", json_schema_extra={"choices": list(MODEL)})
     max_new_tokens: int | None = Field(default=1024, description="[api] maximum number of tokens to generate")
     temperature: float = Field(default=0.5, description="[api] value used to modulate the next token probabilities")
     top_p: float = Field(default=0.5, description="[api] only the smallest set of most probable tokens with probabilities that add up to top_p or higher is kept for generation")

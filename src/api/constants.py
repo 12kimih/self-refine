@@ -2,15 +2,13 @@ import torch
 
 MODEL = {
     "gpt-3.5-turbo": ("openai", "gpt-3.5"),
-    "gpt-3.5-turbo-16k": ("openai", "gpt-3.5"),
     "gpt-3.5-turbo-instruct": ("openai", "gpt-3.5-instruct"),
-    "gpt-3.5-turbo-1106": ("openai", "gpt-3.5"),
+    "gpt-3.5-turbo-0125": ("openai", "gpt-3.5"),
     "gpt-4": ("openai", "gpt-4"),
     "gpt-4-32k": ("openai", "gpt-4"),
-    "gpt-4-0613": ("openai", "gpt-4"),
-    "gpt-4-32k-0613": ("openai", "gpt-4"),
-    "gpt-4-1106-preview": ("openai", "gpt-4"),
+    "gpt-4-turbo-preview": ("openai", "gpt-4"),
     "gpt-4-vision-preview": ("openai", "gpt-4-vision"),
+    "gpt-4-0125-preview": ("openai", "gpt-4"),
     "meta-llama/Llama-2-7b-hf": ("huggingface", "llama-2-7b"),
     "meta-llama/Llama-2-7b-chat-hf": ("huggingface", "llama-2-7b-chat"),
     "meta-llama/Llama-2-13b-hf": ("huggingface", "llama-2-13b"),

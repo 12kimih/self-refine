@@ -7,11 +7,11 @@ conda_packages=(
     "pip"
 )
 pip_packages=(
-    "notebook black[jupyter] isort python-dotenv"
+    "notebook black[jupyter] isort python-dotenv gpustat"
     "requests tqdm protobuf einops"
+    "nltk sentencepiece spacy"
     "numpy scipy matplotlib pandas pandarallel"
     "torch torchvision torchaudio"
-    "nltk sentencepiece spacy"
     "openai huggingface_hub[cli] transformers datasets evaluate accelerate xformers bitsandbytes"
 )
 
