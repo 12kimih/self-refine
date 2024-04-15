@@ -1,8 +1,8 @@
 import argparse
 
+from .api.config import APIConfig
 from .config import BaseConfig
 from .template import BaseTemplate
-from .api.config import APIConfig
 
 TYPE = {
     "boolean": bool,

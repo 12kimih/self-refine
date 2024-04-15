@@ -1,6 +1,6 @@
 import argparse
 
-from datasets import load_dataset, interleave_datasets
+from datasets import interleave_datasets, load_dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--all", default=False, type=bool, action=argparse.BooleanOptionalAction, help="load all datasets")

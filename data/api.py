@@ -1,11 +1,11 @@
-import os
-import time
-import random
 import logging
+import os
+import random
+import time
 
 import openai
 from openai import OpenAI
-from pydantic import Field, BaseModel
+from pydantic import BaseModel, Field
 
 MODEL = {
     "gpt-3.5-turbo": "gpt-3.5",

@@ -1,4 +1,4 @@
-from pydantic import Field, BaseModel
+from pydantic import BaseModel, Field
 
 TASK = ("acronym", "dialog", "math", "sentence", "sentiment")
 

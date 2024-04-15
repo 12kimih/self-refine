@@ -1,6 +1,6 @@
-from pydantic import Field, BaseModel
+from pydantic import BaseModel, Field
 
-from .constants import MODEL, HF_DTYPE, HF_QUANT
+from .constants import HF_DTYPE, HF_QUANT, MODEL
 
 
 class APIConfig(BaseModel):

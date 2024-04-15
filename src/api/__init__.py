@@ -1,7 +1,7 @@
 from .config import APIConfig
-from .openai import OpenAIAPI
 from .constants import MODEL
 from .huggingface import HuggingFaceAPI
+from .openai import OpenAIAPI
 
 API = {
     "openai": OpenAIAPI,

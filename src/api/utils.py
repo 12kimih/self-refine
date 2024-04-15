@@ -1,6 +1,6 @@
-import time
-import random
 import logging
+import random
+import time
 
 
 def retry_with_exponential_backoff(

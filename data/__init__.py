@@ -1,6 +1,6 @@
-from .math import MathTestGenerator, MathTrainGenerator
-from .dialog import DialogTestGenerator, DialogTrainGenerator
 from .acronym import AcronymTestGenerator, AcronymTrainGenerator
+from .dialog import DialogTestGenerator, DialogTrainGenerator
+from .math import MathTestGenerator, MathTrainGenerator
 from .sentence import SentenceTestGenerator, SentenceTrainGenerator
 from .sentiment import SentimentTestGenerator, SentimentTrainGenerator
 

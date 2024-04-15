@@ -3,7 +3,7 @@ import os
 import openai
 from openai import OpenAI
 
-from .base import Usage, BaseAPI, Response
+from .base import BaseAPI, Response, Usage
 from .utils import retry_with_exponential_backoff
 
 

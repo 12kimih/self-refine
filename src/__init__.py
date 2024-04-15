@@ -1,6 +1,6 @@
-from .tasks.math import MathEvaluator, MathGenerator
-from .tasks.dialog import DialogEvaluator, DialogGenerator
 from .tasks.acronym import AcronymEvaluator, AcronymGenerator
+from .tasks.dialog import DialogEvaluator, DialogGenerator
+from .tasks.math import MathEvaluator, MathGenerator
 from .tasks.sentence import SentenceEvaluator, SentenceGenerator
 from .tasks.sentiment import SentimentEvaluator, SentimentGenerator
 

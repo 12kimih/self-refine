@@ -1,10 +1,10 @@
+import itertools
+import json
 import re
 import sys
-import json
-import itertools
 
+from pydantic import BaseModel, Field
 from tqdm import tqdm
-from pydantic import Field, BaseModel
 
 from ..base import BaseGenerator
 

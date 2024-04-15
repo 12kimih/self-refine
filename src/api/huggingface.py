@@ -1,15 +1,10 @@
 import os
 
-import torch
 import huggingface_hub
-from transformers import (
-    AutoTokenizer,
-    StoppingCriteria,
-    AutoModelForCausalLM,
-    StoppingCriteriaList,
-)
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer, StoppingCriteria, StoppingCriteriaList
 
-from .base import Usage, BaseAPI, Response
+from .base import BaseAPI, Response, Usage
 from .constants import HF_DTYPE, HF_QUANT
 
 

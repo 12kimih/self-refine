@@ -6,10 +6,10 @@ from pathlib import Path
 
 from src import get_evaluator, get_generator
 from src.api import get_api, get_model_name
-from src.utils import get_file_number
 from src.config import get_config
 from src.parser import create_parser
 from src.template import get_template
+from src.utils import get_file_number
 
 parser = create_parser()
 args = parser.parse_args()
