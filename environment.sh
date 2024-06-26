@@ -7,7 +7,7 @@ conda_packages=(
     "pip"
 )
 pip_packages=(
-    "jupyter black[jupyter] isort python-dotenv gpustat tqdm"
+    "jupyter black[jupyter] isort nbqa python-dotenv gpustat tqdm"
     "numpy scipy matplotlib seaborn pandas pandarallel"
     "torch torchvision torchaudio"
     "nltk sentencepiece spacy protobuf einops"
