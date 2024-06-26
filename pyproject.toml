@@ -1,7 +1,5 @@
 [tool.black]
-line-length = 200
+line-length = 1000
 
 [tool.isort]
-line_length = 200
-multi_line_output = 3
-include_trailing_comma = true
+profile = "black"
