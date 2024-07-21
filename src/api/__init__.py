@@ -1,5 +1,5 @@
 from .config import APIConfig
-from .constants import MODEL
+from .constants import MODELS
 from .huggingface import HuggingFaceAPI
 from .openai import OpenAIAPI
 
@@ -11,12 +11,12 @@ API = {
 
 def get_api(args):
     config = APIConfig(**vars(args))
-    if config.model not in MODEL:
+    if config.model not in MODELS:
         raise ValueError(f"{config.model} is not supported.")
-    return API[MODEL[config.model][0]](config)
+    return API[MODELS[config.model][0]](config)
 
 
 def get_model_name(model: str) -> str:
-    if model not in MODEL:
+    if model not in MODELS:
         raise ValueError(f"{model} is not supported.")
-    return MODEL[model][1]
+    return MODELS[model][1]

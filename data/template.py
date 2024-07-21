@@ -48,50 +48,11 @@ class AcronymTemplate(BaseTemplate):
         "* Familiarity: <feedback>. Score: <score>/10\n"
         "Total score: <total score>/40"
     )
-    train_regex: str = (
-        r"Bad acronym:\s*(\w[\w\-]*)\s*.*?\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Relevance to the title:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Ease of pronunciation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Ease of spelling:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Familiarity:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"Total score:\s*\d+/40\s*\n\n"
-        r"Good acronym:\s*(\w[\w\-]*)\s*.*?\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Relevance to the title:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Ease of pronunciation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Ease of spelling:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Familiarity:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
-    )
-    train_output: str = (
-        "Title: {title}\n\n"
-        "Bad acronym: {acronym_a}\n"
-        "Feedback:\n"
-        "* Relevance to the title: {feedback_a.relevance} Score: {feedback_a.relevance_score}/10\n"
-        "* Ease of pronunciation: {feedback_a.pronunciation} Score: {feedback_a.pronunciation_score}/10\n"
-        "* Ease of spelling: {feedback_a.spelling} Score: {feedback_a.spelling_score}/10\n"
-        "* Familiarity: {feedback_a.familiarity} Score: {feedback_a.familiarity_score}/10\n"
-        "Total score: {feedback_a.total_score}/40\n\n"
-        "Good acronym: {acronym_b}\n"
-        "Feedback:\n"
-        "* Relevance to the title: {feedback_b.relevance} Score: {feedback_b.relevance_score}/10\n"
-        "* Ease of pronunciation: {feedback_b.pronunciation} Score: {feedback_b.pronunciation_score}/10\n"
-        "* Ease of spelling: {feedback_b.spelling} Score: {feedback_b.spelling_score}/10\n"
-        "* Familiarity: {feedback_b.familiarity} Score: {feedback_b.familiarity_score}/10\n"
-        "Total score: {feedback_b.total_score}/40\n"
-    )
+    train_regex: str = r"Bad acronym:\s*(\w[\w\-]*)\s*.*?\n" r"Feedback:\s*\n" r"(?:\*|-) Relevance to the title:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Ease of pronunciation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Ease of spelling:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Familiarity:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"Total score:\s*\d+/40\s*\n\n" r"Good acronym:\s*(\w[\w\-]*)\s*.*?\n" r"Feedback:\s*\n" r"(?:\*|-) Relevance to the title:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Ease of pronunciation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Ease of spelling:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Familiarity:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
+    train_output: str = "Title: {title}\n\n" "Bad acronym: {acronym_a}\n" "Feedback:\n" "* Relevance to the title: {feedback_a.relevance} Score: {feedback_a.relevance_score}/10\n" "* Ease of pronunciation: {feedback_a.pronunciation} Score: {feedback_a.pronunciation_score}/10\n" "* Ease of spelling: {feedback_a.spelling} Score: {feedback_a.spelling_score}/10\n" "* Familiarity: {feedback_a.familiarity} Score: {feedback_a.familiarity_score}/10\n" "Total score: {feedback_a.total_score}/40\n\n" "Good acronym: {acronym_b}\n" "Feedback:\n" "* Relevance to the title: {feedback_b.relevance} Score: {feedback_b.relevance_score}/10\n" "* Ease of pronunciation: {feedback_b.pronunciation} Score: {feedback_b.pronunciation_score}/10\n" "* Ease of spelling: {feedback_b.spelling} Score: {feedback_b.spelling_score}/10\n" "* Familiarity: {feedback_b.familiarity} Score: {feedback_b.familiarity_score}/10\n" "Total score: {feedback_b.total_score}/40\n"
 
     test_context: str = "Title: {title}\n\n"
-    test_instruction: str = (
-        "We want to create an acronym that effectively represents the given title. "
-        "The acronym should meet the following four criteria:\n"
-        "* Relevance to the title\n"
-        "* Ease of pronunciation\n"
-        "* Ease of spelling\n"
-        "* Familiarity\n\n"
-        "Answer in the following format:\n"
-        "Acronym: <acronym>"
-    )
+    test_instruction: str = "We want to create an acronym that effectively represents the given title. " "The acronym should meet the following four criteria:\n" "* Relevance to the title\n" "* Ease of pronunciation\n" "* Ease of spelling\n" "* Familiarity\n\n" "Answer in the following format:\n" "Acronym: <acronym>"
     test_regex: str = r"Acronym:\s*(\w[\w\-]*)\s*.*?(?:\n|$)"
     test_output: str = "Title: {title}\nAcronym: {acronym}\n"
 
@@ -125,45 +86,11 @@ class DialogTemplate(BaseTemplate):
         "* Sustaining the conversation: <feedback>. Score: <score>/10\n"
         "Total score: <total score>/30"
     )
-    train_regex: str = (
-        r"Bad response:\s*(.*?)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Consistency in conversational context and tone:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Understanding the speaker's intent:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Sustaining the conversation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"Total score:\s*\d+/30\s*\n\n"
-        r"Good response:\s*(.*?)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Consistency in conversational context and tone:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Understanding the speaker's intent:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Sustaining the conversation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
-    )
-    train_output: str = (
-        "Conversation history:\n{dialog}\n\n"
-        "Bad response: {response_a}\n"
-        "Feedback:\n"
-        "* Consistency in conversational context and tone: {feedback_a.consistency} Score: {feedback_a.consistency_score}/10\n"
-        "* Understanding the speaker's intent: {feedback_a.understand} Score: {feedback_a.understand_score}/10\n"
-        "* Sustaining the conversation: {feedback_a.sustain} Score: {feedback_a.sustain_score}/10\n"
-        "Total score: {feedback_a.total_score}/30\n\n"
-        "Good response: {response_b}\n"
-        "Feedback:\n"
-        "* Consistency in conversational context and tone: {feedback_b.consistency} Score: {feedback_b.consistency_score}/10\n"
-        "* Understanding the speaker's intent: {feedback_b.understand} Score: {feedback_b.understand_score}/10\n"
-        "* Sustaining the conversation: {feedback_b.sustain} Score: {feedback_b.sustain_score}/10\n"
-        "Total score: {feedback_b.total_score}/30\n"
-    )
+    train_regex: str = r"Bad response:\s*(.*?)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Consistency in conversational context and tone:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Understanding the speaker's intent:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Sustaining the conversation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"Total score:\s*\d+/30\s*\n\n" r"Good response:\s*(.*?)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Consistency in conversational context and tone:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Understanding the speaker's intent:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Sustaining the conversation:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
+    train_output: str = "Conversation history:\n{dialog}\n\n" "Bad response: {response_a}\n" "Feedback:\n" "* Consistency in conversational context and tone: {feedback_a.consistency} Score: {feedback_a.consistency_score}/10\n" "* Understanding the speaker's intent: {feedback_a.understand} Score: {feedback_a.understand_score}/10\n" "* Sustaining the conversation: {feedback_a.sustain} Score: {feedback_a.sustain_score}/10\n" "Total score: {feedback_a.total_score}/30\n\n" "Good response: {response_b}\n" "Feedback:\n" "* Consistency in conversational context and tone: {feedback_b.consistency} Score: {feedback_b.consistency_score}/10\n" "* Understanding the speaker's intent: {feedback_b.understand} Score: {feedback_b.understand_score}/10\n" "* Sustaining the conversation: {feedback_b.sustain} Score: {feedback_b.sustain_score}/10\n" "Total score: {feedback_b.total_score}/30\n"
 
     test_context: str = "Conversation history:\n{dialog}\n\n"
-    test_instruction: str = (
-        "We want to create a sensible and context-appropriate response for speaker B based on the given conversation history. "
-        "The response should meet the following three criteria:\n"
-        "* Consistency in conversational context and tone\n"
-        "* Understanding the speaker's intent\n"
-        "* Sustaining the conversation\n\n"
-        "Answer in the following format:\n"
-        "Response: <response>"
-    )
+    test_instruction: str = "We want to create a sensible and context-appropriate response for speaker B based on the given conversation history. " "The response should meet the following three criteria:\n" "* Consistency in conversational context and tone\n" "* Understanding the speaker's intent\n" "* Sustaining the conversation\n\n" "Answer in the following format:\n" "Response: <response>"
     test_regex: str = r"Response:\s*(.*?)\s*(?:\n|$)"
     test_output: str = "Conversation history:\n{dialog}\nResponse: {response}\n"
 
@@ -207,30 +134,8 @@ class MathTemplate(BaseTemplate):
         "* Validity of equations: <feedback>. Score: <score>/10\n"
         "Total score: <total score>/20"
     )
-    train_regex: str = (
-        r"Bad solution:\s*\n\s*((?:.|\n)+?)\s*\n\s*####\s*(\d+)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Adequacy of dividing the problem into logical steps:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Validity of equations:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"Total score:\s*\d+/20\s*\n\n"
-        r"Good solution:\s*\n\s*((?:.|\n)+?)\s*\n\s*####\s*(\d+)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Adequacy of dividing the problem into logical steps:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Validity of equations:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
-    )
-    train_output: str = (
-        "Math problem: {question}\n\n"
-        "Bad solution:\n{solution_a.steps}\n#### {solution_a.answer}\n"
-        "Feedback:\n"
-        "* Adequacy of dividing the problem into logical steps: {feedback_a.adequacy} Score: {feedback_a.adequacy_score}/10\n"
-        "* Validity of equations: {feedback_a.validity} Score: {feedback_a.validity_score}/10\n"
-        "Total score: {feedback_a.total_score}/20\n\n"
-        "Good solution:\n{solution_b.steps}\n#### {solution_b.answer}\n"
-        "Feedback:\n"
-        "* Adequacy of dividing the problem into logical steps: {feedback_b.adequacy} Score: {feedback_b.adequacy_score}/10\n"
-        "* Validity of equations: {feedback_b.validity} Score: {feedback_b.validity_score}/10\n"
-        "Total score: {feedback_b.total_score}/20\n"
-    )
+    train_regex: str = r"Bad solution:\s*\n\s*((?:.|\n)+?)\s*\n\s*####\s*(\d+)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Adequacy of dividing the problem into logical steps:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Validity of equations:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"Total score:\s*\d+/20\s*\n\n" r"Good solution:\s*\n\s*((?:.|\n)+?)\s*\n\s*####\s*(\d+)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Adequacy of dividing the problem into logical steps:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Validity of equations:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
+    train_output: str = "Math problem: {question}\n\n" "Bad solution:\n{solution_a.steps}\n#### {solution_a.answer}\n" "Feedback:\n" "* Adequacy of dividing the problem into logical steps: {feedback_a.adequacy} Score: {feedback_a.adequacy_score}/10\n" "* Validity of equations: {feedback_a.validity} Score: {feedback_a.validity_score}/10\n" "Total score: {feedback_a.total_score}/20\n\n" "Good solution:\n{solution_b.steps}\n#### {solution_b.answer}\n" "Feedback:\n" "* Adequacy of dividing the problem into logical steps: {feedback_b.adequacy} Score: {feedback_b.adequacy_score}/10\n" "* Validity of equations: {feedback_b.validity} Score: {feedback_b.validity_score}/10\n" "Total score: {feedback_b.total_score}/20\n"
 
     test_context: str = "Math problem: {question}\n\n"
     test_instruction: str = (
@@ -286,40 +191,11 @@ class SentenceTemplate(BaseTemplate):
         "* Logical coherence: <feedback>. Score: <score>/10\n"
         "Total score: <total score>/20"
     )
-    train_regex: str = (
-        r"Bad sentence:\s*(.*?)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Inclusion of the concepts:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"Total score:\s*\d+/20\s*\n\n"
-        r"Good sentence:\s*(.*?)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Inclusion of the concepts:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
-    )
-    train_output: str = (
-        "Concepts: {concepts}\n\n"
-        "Bad sentence: {sentence_a}\n"
-        "Feedback:\n"
-        "* Inclusion of the concepts: {feedback_a.inclusion} Score: {feedback_a.inclusion_score}/10\n"
-        "* Logical coherence: {feedback_a.logical} Score: {feedback_a.logical_score}/10\n"
-        "Total score: {feedback_a.total_score}/20\n\n"
-        "Good sentence: {sentence_b}\n"
-        "Feedback:\n"
-        "* Inclusion of the concepts: {feedback_b.inclusion} Score: {feedback_b.inclusion_score}/10\n"
-        "* Logical coherence: {feedback_b.logical} Score: {feedback_b.logical_score}/10\n"
-        "Total score: {feedback_b.total_score}/20\n"
-    )
+    train_regex: str = r"Bad sentence:\s*(.*?)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Inclusion of the concepts:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"Total score:\s*\d+/20\s*\n\n" r"Good sentence:\s*(.*?)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Inclusion of the concepts:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
+    train_output: str = "Concepts: {concepts}\n\n" "Bad sentence: {sentence_a}\n" "Feedback:\n" "* Inclusion of the concepts: {feedback_a.inclusion} Score: {feedback_a.inclusion_score}/10\n" "* Logical coherence: {feedback_a.logical} Score: {feedback_a.logical_score}/10\n" "Total score: {feedback_a.total_score}/20\n\n" "Good sentence: {sentence_b}\n" "Feedback:\n" "* Inclusion of the concepts: {feedback_b.inclusion} Score: {feedback_b.inclusion_score}/10\n" "* Logical coherence: {feedback_b.logical} Score: {feedback_b.logical_score}/10\n" "Total score: {feedback_b.total_score}/20\n"
 
     test_context: str = "Concepts: {concepts}\n\n"
-    test_instruction: str = (
-        "We want to create a sentence that incorporates as many given concepts as possible within the bounds of logical coherence. "
-        "The sentence should meet the following two criteria:\n"
-        "* Inclusion of the concepts\n"
-        "* Logical coherence\n\n"
-        "Answer in the following format:\n"
-        "Sentence: <sentence>"
-    )
+    test_instruction: str = "We want to create a sentence that incorporates as many given concepts as possible within the bounds of logical coherence. " "The sentence should meet the following two criteria:\n" "* Inclusion of the concepts\n" "* Logical coherence\n\n" "Answer in the following format:\n" "Sentence: <sentence>"
     test_regex: str = r"Sentence:\s*(.*?)\s*(?:\n|$)"
     test_output: str = "Concepts: {concepts}\nSentence: {sentence}\n"
 
@@ -350,40 +226,11 @@ class SentimentTemplate(BaseTemplate):
         "* Logical coherence: <feedback>. Score: <score>/10\n"
         "Total score: <total score>/20"
     )
-    train_regex: str = (
-        r"Bad example:\s*(.*?)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Effectiveness of sentiment reversal:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"Total score:\s*\d+/20\s*\n\n"
-        r"Good example:\s*(.*?)\s*\n"
-        r"Feedback:\s*\n"
-        r"(?:\*|-) Effectiveness of sentiment reversal:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n"
-        r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
-    )
-    train_output: str = (
-        "Review: {review}\n\n"
-        "Bad example: {reversed_review_a}\n"
-        "Feedback:\n"
-        "* Effectiveness of sentiment reversal: {feedback_a.effective} Score: {feedback_a.effective_score}/10\n"
-        "* Logical coherence: {feedback_a.logical} Score: {feedback_a.logical_score}/10\n"
-        "Total score: {feedback_a.total_score}/20\n\n"
-        "Good example: {reversed_review_b}\n"
-        "Feedback:\n"
-        "* Effectiveness of sentiment reversal: {feedback_b.effective} Score: {feedback_b.effective_score}/10\n"
-        "* Logical coherence: {feedback_b.logical} Score: {feedback_b.logical_score}/10\n"
-        "Total score: {feedback_b.total_score}/20\n"
-    )
+    train_regex: str = r"Bad example:\s*(.*?)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Effectiveness of sentiment reversal:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"Total score:\s*\d+/20\s*\n\n" r"Good example:\s*(.*?)\s*\n" r"Feedback:\s*\n" r"(?:\*|-) Effectiveness of sentiment reversal:\s*(.*?)\s*Score:\s*(\d+)\/10\s*\n" r"(?:\*|-) Logical coherence:\s*(.*?)\s*Score:\s*(\d+)\/10\s*(?:\n|$)"
+    train_output: str = "Review: {review}\n\n" "Bad example: {reversed_review_a}\n" "Feedback:\n" "* Effectiveness of sentiment reversal: {feedback_a.effective} Score: {feedback_a.effective_score}/10\n" "* Logical coherence: {feedback_a.logical} Score: {feedback_a.logical_score}/10\n" "Total score: {feedback_a.total_score}/20\n\n" "Good example: {reversed_review_b}\n" "Feedback:\n" "* Effectiveness of sentiment reversal: {feedback_b.effective} Score: {feedback_b.effective_score}/10\n" "* Logical coherence: {feedback_b.logical} Score: {feedback_b.logical_score}/10\n" "Total score: {feedback_b.total_score}/20\n"
 
     test_context: str = "Review: {review}\n\n"
-    test_instruction: str = (
-        "We want to create a reversed review that conveys the opposite sentiment of the given review. "
-        "The reversed review should meet the following two criteria:\n"
-        "* Effectiveness of sentiment reversal\n"
-        "* Logical coherence\n\n"
-        "Answer in the following format:\n"
-        "Reversed review: <reversed review>"
-    )
+    test_instruction: str = "We want to create a reversed review that conveys the opposite sentiment of the given review. " "The reversed review should meet the following two criteria:\n" "* Effectiveness of sentiment reversal\n" "* Logical coherence\n\n" "Answer in the following format:\n" "Reversed review: <reversed review>"
     test_regex: str = r"Reversed review:\s*(.*?)\s*(?:\n|$)"
     test_output: str = "Review: {review}\nReversed review: {reversed_review}\n"
 

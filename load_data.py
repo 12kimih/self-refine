@@ -68,9 +68,7 @@ def load_sentiment():
     filtered_dataset_n = shuffled_dataset.filter(lambda example: example["label"] == 0 and len(example["text"]) >= 200 and len(example["text"]) <= 300)
     filtered_dataset_p = shuffled_dataset.filter(lambda example: example["label"] == 4 and len(example["text"]) >= 200 and len(example["text"]) <= 300)
     interleave_datasets([filtered_dataset_n.select(range(args.train // 2)), filtered_dataset_p.select(range(args.train // 2))]).to_json("data/sentiment/yelp-review-full-train.jsonl")
-    interleave_datasets([filtered_dataset_n.select(range(args.train // 2, args.total // 2)), filtered_dataset_p.select(range(args.train // 2, args.total // 2))]).to_json(
-        "data/sentiment/yelp-review-full-test.jsonl"
-    )
+    interleave_datasets([filtered_dataset_n.select(range(args.train // 2, args.total // 2)), filtered_dataset_p.select(range(args.train // 2, args.total // 2))]).to_json("data/sentiment/yelp-review-full-test.jsonl")
 
 
 if args.all:

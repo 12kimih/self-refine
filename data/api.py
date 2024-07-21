@@ -7,20 +7,34 @@ import openai
 from openai import OpenAI
 from pydantic import BaseModel, Field
 
-MODEL = {
-    "gpt-3.5-turbo": "gpt-3.5",
-    "gpt-3.5-turbo-instruct": "gpt-3.5-instruct",
-    "gpt-3.5-turbo-0125": "gpt-3.5",
+# July 21, 2024
+MODELS = {
+    # GPT-4o
+    "gpt-4o": "gpt-4o",
+    "gpt-4o-2024-05-13": "gpt-4o",
+    # GPT-4o mini
+    "gpt-4o-mini": "gpt-4o-mini",
+    "gpt-4o-mini-2024-07-18": "gpt-4o-mini",
+    # GPT-4 Turbo
+    "gpt-4-turbo": "gpt-4-turbo",
+    "gpt-4-turbo-2024-04-09": "gpt-4-turbo",
+    "gpt-4-turbo-preview": "gpt-4-turbo",
+    "gpt-4-0125-preview": "gpt-4-turbo",
+    "gpt-4-1106-preview": "gpt-4-turbo",
+    # GPT-4
     "gpt-4": "gpt-4",
-    "gpt-4-32k": "gpt-4",
-    "gpt-4-turbo-preview": "gpt-4",
-    "gpt-4-vision-preview": "gpt-4-vision",
-    "gpt-4-0125-preview": "gpt-4",
+    "gpt-4-0613": "gpt-4",
+    "gpt-4-0314": "gpt-4",
+    # GPT-3.5 Turbo
+    "gpt-3.5-turbo": "gpt-3.5-turbo",
+    "gpt-3.5-turbo-0125": "gpt-3.5-turbo",
+    "gpt-3.5-turbo-1106": "gpt-3.5-turbo",
+    "gpt-3.5-turbo-instruct": "gpt-3.5-turbo-instruct",
 }
 
 
 class APIConfig(BaseModel):
-    model: str = Field(default="gpt-3.5-turbo-0125", description="[api] text generation model code", json_schema_extra={"choices": list(MODEL)})
+    model: str = Field(default="gpt-4o", description="[api] text generation model code", json_schema_extra={"choices": list(MODELS)})
     max_new_tokens: int | None = Field(default=1024, description="[api] maximum number of tokens to generate")
     temperature: float = Field(default=0.5, description="[api] value used to modulate the next token probabilities")
     top_p: float = Field(default=0.5, description="[api] only the smallest set of most probable tokens with probabilities that add up to top_p or higher is kept for generation")
@@ -145,6 +159,6 @@ def get_api(args):
 
 
 def get_model_name(model: str) -> str:
-    if model not in MODEL:
+    if model not in MODELS:
         raise ValueError(f"{model} is not supported.")
-    return MODEL[model]
+    return MODELS[model]

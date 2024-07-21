@@ -1,10 +1,10 @@
 from pydantic import BaseModel, Field
 
-from .constants import HF_DTYPE, HF_QUANT, MODEL
+from .constants import HF_DTYPE, HF_QUANT, MODELS
 
 
 class APIConfig(BaseModel):
-    model: str = Field(default="gpt-3.5-turbo-0125", description="[api] text generation model code", json_schema_extra={"choices": list(MODEL)})
+    model: str = Field(default="gpt-4o-mini", description="[api] text generation model code", json_schema_extra={"choices": list(MODELS)})
     hf_dtype: str = Field(default="default", description="[api] HuggingFace model data type", json_schema_extra={"choices": list(HF_DTYPE)})
     hf_quant: str = Field(default="default", description="[api] HuggingFace model quantization method", json_schema_extra={"choices": list(HF_QUANT)})
     max_length: int = Field(default=4096, description="[api] maximum length of input prompt + max_new_tokens; overridden by max_new_tokens")

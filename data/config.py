@@ -1,10 +1,10 @@
 from pydantic import BaseModel, Field
 
-TASK = ("acronym", "dialog", "math", "sentence", "sentiment")
+TASKS = ("acronym", "dialog", "math", "sentence", "sentiment")
 
 
 class BaseConfig(BaseModel):
-    task: str = Field(description="[task] task name", json_schema_extra={"required": True, "choices": list(TASK)})
+    task: str = Field(description="[task] task name", json_schema_extra={"required": True, "choices": list(TASKS)})
     train: bool = Field(default=False, description="[task] whether or not to generate train labels")
     test: bool = Field(default=False, description="[task] whether or not to generate test labels")
     file: bool = Field(default=False, description="[task] whether or not to take input from a file")
