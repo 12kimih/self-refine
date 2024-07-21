@@ -1,17 +1,15 @@
 #!/bin/bash
 
-# change as you wish
+# environment settings
 default_name="self-refine"
 python_version=3.11
 conda_packages=(
     "pip"
 )
 pip_packages=(
-    "jupyter black[jupyter] isort nbqa python-dotenv gpustat tqdm"
-    "numpy scipy matplotlib seaborn pandas pandarallel"
-    "torch torchvision torchaudio"
-    "nltk sentencepiece spacy protobuf einops"
-    "openai huggingface_hub[cli] transformers datasets evaluate accelerate xformers bitsandbytes"
+    "jupyter black[jupyter] isort nbqa gpustat python-dotenv tqdm protobuf einops"
+    "numpy scipy matplotlib seaborn pandas pandarallel scikit-learn scikit-learn-intelex"
+    "torch torchvision torchaudio huggingface_hub[cli] transformers datasets accelerate xformers bitsandbytes openai spacy nltk sentencepiece"
 )
 
 # read environment name
@@ -25,14 +23,14 @@ if [ -z "$name" ]; then
 fi
 
 # initialize conda
-__conda_setup="$($HOME/anaconda3/bin/conda shell.bash hook 2> /dev/null)"
+__conda_setup="$($HOME/miniconda3/bin/conda shell.bash hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="$HOME/anaconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
