@@ -4,14 +4,9 @@ load_dotenv()
 
 import os
 
-import huggingface_hub
+from huggingface_hub import login, snapshot_download
 
-huggingface_hub.login(token=os.environ["HUGGINGFACE_TOKEN"])
-
-import gc
-
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+login(token=os.environ["HUGGINGFACE_TOKEN"])
 
 # August 01, 2024
 MODELS = [
@@ -54,8 +49,5 @@ MODELS = [
 ]
 
 for i, m in enumerate(MODELS):
-    print(f"({i + 1:02d}/{len(MODELS):02d}) Loading {m}...")
-    tokenizer = AutoTokenizer.from_pretrained(m, trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(m, torch_dtype=torch.float16, trust_remote_code=True)
-    del tokenizer, model
-    gc.collect()
+    print(f"({i + 1:02d}/{len(MODELS):02d}) Downloading {m}...")
+    snapshot_download(repo_id=m)
