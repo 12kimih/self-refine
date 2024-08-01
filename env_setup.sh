@@ -9,7 +9,7 @@ conda_packages=(
 pip_packages=(
     "jupyter black[jupyter] isort nbqa gpustat python-dotenv tqdm protobuf pytest"
     "numpy scipy matplotlib seaborn pandas pandarallel scikit-learn scikit-learn-intelex"
-    "torch torchvision torchaudio huggingface_hub[cli] transformers datasets accelerate xformers bitsandbytes"
+    "torch torchvision torchaudio torchinfo huggingface_hub[cli] transformers datasets accelerate xformers bitsandbytes"
     "openai flash-attn spacy nltk sentencepiece tiktoken einops"
 )
 
