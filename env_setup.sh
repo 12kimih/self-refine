@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# environment settings
+# environment configs
 default_name="self-refine"
 conda_packages=(
     "pip"
@@ -35,6 +35,9 @@ else
     fi
 fi
 unset __conda_setup
+
+# update conda
+conda update conda -y
 
 # create conda environment
 conda create -n "$name" -y
