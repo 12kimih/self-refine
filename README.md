@@ -2,7 +2,7 @@
 
 Re-implementation of Self-Refine
 
-Paper: <https://arxiv.org/abs/2303.17651>
+Paper: <https://arxiv.org/abs/2303.17651>\
 Website: <https://selfrefine.info/>
 
 ## Usage
@@ -10,18 +10,18 @@ Website: <https://selfrefine.info/>
 > [!NOTE]
 > Make sure that you are in the project directory.
 
-### Set up virtual environment
+### 1. Set up virtual environment
 
 Choose either [`conda`](#conda) or [`venv`](#venv).
 
 #### `conda`
 
 ```bash
-conda update conda
+conda update conda -y
 ```
 
 ```bash
-conda create -n self-refine python=3.11
+conda create -n self-refine -y
 ```
 
 ```bash
@@ -29,7 +29,7 @@ conda activate self-refine
 ```
 
 ```bash
-conda install pip
+conda install pip -y
 ```
 
 ```bash
@@ -61,16 +61,23 @@ pip install -U pip setuptools wheel
 pip install -r requirements.txt
 ```
 
-### Configure `dotenv`
+### 2. Configure `.env`
 
 ```bash
-cp dotenv .env
+vim .env
 ```
 
 > [!IMPORTANT]
-> Fill in the blanks in the `.env` file according to your personal environment.
+> Please enter the following API keys in the `.env` file:
+> 
+> OPENAI_API_KEY=\
+> HF_TOKEN=
 
-### Run program
+```bash
+chmod 600 .env
+```
+
+### 3. Run program
 
 > [!NOTE]
 > If `model` argument is not specified, the default model is `gpt-4o-mini`.
@@ -92,7 +99,7 @@ python3 main.py --task {acronym,dialog,sentence,sentiment} --generate --file [--
 > [!NOTE]
 > Outputs are saved in outputs/\<task\>/
 
-### Examples
+### 4. Examples
 
 1. Acronym generation with `gpt-4o-mini`, taking input from the command line
 
