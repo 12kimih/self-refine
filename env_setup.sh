@@ -6,11 +6,11 @@ conda_packages=(
     "pip"
 )
 pip_packages=(
-    "jupyter black[jupyter] isort nbqa python-dotenv gpustat tqdm tenacity protobuf pytest"
+    "jupyter black[jupyter] isort nbqa python-dotenv gpustat tqdm tenacity packaging ninja"
     "numpy scipy matplotlib seaborn pandas pandarallel scikit-learn scikit-learn-intelex"
     "torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124"
-    "huggingface_hub[all] transformers datasets accelerate bitsandbytes flash-attn xformers"
-    "openai spacy nltk sentencepiece tiktoken einops torchinfo"
+    "huggingface_hub[all] transformers datasets accelerate bitsandbytes openai tiktoken einops"
+    "flash-attn --no-build-isolation"
 )
 
 # read environment name
