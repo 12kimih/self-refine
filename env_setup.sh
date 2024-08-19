@@ -2,15 +2,15 @@
 
 # environment settings
 default_name="self-refine"
-python_version=3.11
 conda_packages=(
     "pip"
 )
 pip_packages=(
-    "jupyter black[jupyter] isort nbqa gpustat python-dotenv tqdm protobuf pytest"
+    "jupyter black[jupyter] isort nbqa python-dotenv gpustat tqdm tenacity protobuf pytest"
     "numpy scipy matplotlib seaborn pandas pandarallel scikit-learn scikit-learn-intelex"
-    "torch torchvision torchaudio torchinfo huggingface_hub[cli] transformers datasets accelerate xformers bitsandbytes"
-    "openai flash-attn spacy nltk sentencepiece tiktoken einops"
+    "torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124"
+    "huggingface_hub[all] transformers datasets accelerate bitsandbytes flash-attn xformers"
+    "openai spacy nltk sentencepiece tiktoken einops torchinfo"
 )
 
 # read environment name
@@ -37,7 +37,7 @@ fi
 unset __conda_setup
 
 # create conda environment
-conda create -n "$name" python=$python_version -y
+conda create -n "$name" -y
 exit_status=$?
 if [ $exit_status -ne 0 ]; then
     exit $exit_status

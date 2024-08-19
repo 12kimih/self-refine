@@ -23,7 +23,7 @@ class StopOnTokens(StoppingCriteria):
 class HuggingFaceAPI(BaseAPI):
     def __init__(self, config) -> None:
         super().__init__(config=config)
-        huggingface_hub.login(token=os.environ["HUGGINGFACE_TOKEN"])
+        huggingface_hub.login(token=os.environ["HF_TOKEN"])
         self.tokenizer = AutoTokenizer.from_pretrained(self.config.model, padding_side="left")
         self.tokenizer.pad_token = self.tokenizer.eos_token
         self.model = AutoModelForCausalLM.from_pretrained(self.config.model, device_map="auto", **HF_DTYPE[self.config.hf_dtype], **HF_QUANT[self.config.hf_quant])
